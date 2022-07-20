@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/gabri/AndroidStudioProjects/StarWarsEncyclopedia/app/src/main/res/drawable/splash_screen.xml" value="0.1195" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/StarWarsEncyclopedia/app/src/main/res/layout/activity_main.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/StarWarsEncyclopedia/app/src/main/res/layout/fragment_home.xml" value="0.2" />
       </map>
     </option>
   </component>
