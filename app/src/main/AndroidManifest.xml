@@ -14,7 +14,7 @@
         android:theme="@style/Theme.StarWarsEncyclopedia"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:theme="@style/Theme.Splashscreen"
             android:exported="true">
             <intent-filter>
