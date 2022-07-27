@@ -11,16 +11,16 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/contentSearch"
-        android:padding="@dimen/dimenpadding"
-        android:background="@color/blueColor"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/blueColor"
+        android:padding="@dimen/dimenpadding">
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
-            android:background="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/white">
 
         </androidx.appcompat.widget.SearchView>
 
@@ -391,4 +391,18 @@
         </LinearLayout>
 
     </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <TextView
+        android:id="@+id/tvErrorMessage"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_below="@id/contentSearch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        tools:text="Ups! Something wrong!"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorMessageError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>

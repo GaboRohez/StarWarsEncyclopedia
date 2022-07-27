@@ -7,6 +7,12 @@ public interface HomeContract {
     interface View {
 
         void showCharacters(PeopleResponse response);
+
+        void showLoader();
+
+        void hideLoader();
+
+        void showError(String message);
     }
 
     interface Presenter {

@@ -3,6 +3,7 @@ package xyz.gaborohez.starwarsencyclopedia.ui.home.presenter;
 import android.util.Log;
 
 import xyz.gaborohez.starwarsencyclopedia.base.BasePresenter;
+import xyz.gaborohez.starwarsencyclopedia.base.StarWarsApplication;
 
 public class HomePresenter extends BasePresenter<HomeContract.View> implements HomeContract.Presenter{
 
@@ -17,16 +18,18 @@ public class HomePresenter extends BasePresenter<HomeContract.View> implements H
 
     @Override
     public void getPeople() {
-        addSubscription(interactor.getPeople()
-                .doOnSubscribe(disposable -> {
-                    //view.showLoader()
-                }).subscribe(response -> {
-                    Log.d(TAG, "getPeople: "+response.toString());
+        addSubscription(interactor
+                .getPeople()
+                .doOnSubscribe(disposable -> view.showLoader())
+                .doAfterTerminate(() -> view.hideLoader())
+                .subscribe(response -> {
                     if (!response.getResults().isEmpty()){
                         view.showCharacters(response);
+                    }else {
+                        view.showError(StarWarsApplication.androidResourceManager.getEmptyListError());
                     }
                 }, throwable -> {
-                    //view.showErrorDialog(processError(throwable));
+                    view.showError(StarWarsApplication.androidResourceManager.getErrorMessage());
                 }));
     }
 }

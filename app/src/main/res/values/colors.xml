@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blueColor">#1C2349</color>
     <color name="backgroudShimmer">#CACACA</color>
+    <color name="colorMessageError">#8F8F8F</color>
 </resources>

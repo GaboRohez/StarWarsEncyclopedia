@@ -58,13 +58,27 @@ public class HomeFragment extends BaseFragment<HomeContract.Presenter, FragmentH
         binding.recycler.setHasFixedSize(true);
         binding.recycler.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-
-        binding.contentShimmer.setVisibility(View.GONE);
         binding.recycler.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void onCharacterClick(Character character) {
         Toast.makeText(requireContext(), character.getName(), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showLoader() {
+        binding.contentShimmer.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideLoader() {
+        binding.contentShimmer.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void showError(String message) {
+        binding.tvErrorMessage.setText(message);
+        binding.tvErrorMessage.setVisibility(View.VISIBLE);
     }
 }

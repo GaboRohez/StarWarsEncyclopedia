@@ -6,5 +6,7 @@
     // retrofit responses
     <string name="retrofit_failure">At the moment the service is not available. Please retry the request.</string>
     <string name="retrofit_timeout">The timeout has been exceeded, please retry the request.</string>
+    <string name="error_in_response">An error occurred, please try again later.</string>
+    <string name="empty_list_message">Sorry, we don\'t find result in this time.</string>
 
 </resources>
